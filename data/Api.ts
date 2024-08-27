@@ -6,6 +6,7 @@ export interface Api {
 }
 
 export type Films = {
+id: string | number;
 title: string;
 image: string | number;
 description: string;

@@ -2,6 +2,13 @@ body{
   background-color: beige;
 }
 
+header{
+  background-color: #213547;
+  padding: 2em;
+  margin: 0em;
+  width:100%
+}
+
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -37,4 +44,15 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+p.about{
+  margin: 3em;
+  padding: 1em;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace
+}
+div.aboutdiv{
+  display:flex;
+  
 }
