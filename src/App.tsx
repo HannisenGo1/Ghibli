@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import {getFilms , Films} from '../data/Api'
-
+import SearchLabel from '../components/searchlabel'
 import './App.css'
 import Info from './info'
 
@@ -9,6 +9,9 @@ function App() {
   const [loadingData, setLoadingData] = useState <boolean>(false)
   const [errorMess,setErrorMess] = useState <string | null> (null)
   const[search,setSearch] = useState<string>('')
+  //
+const filteredFilms: Films [] = films.filter(f => f.title.toLowerCase().
+includes(search.toLowerCase()))
 
 
   const getData = async () => {
@@ -34,9 +37,19 @@ function App() {
       <header className="header"> </header>
        <h1> Studio Ghibli</h1>
        <p> <Info/> </p>
-       <button onClick={getData}> Hämta data </button>
-       <p> sök fält: </p>
-       <label> </label>
+       
+       <input type="text" placeholder="Find movie"
+        onChange={(event) => setSearch(event.target.value)
+       }value={search} /> 
+
+       <button className="searchBtn" onClick={getData}> Search </button>
+       <div className ="film-grid">
+
+       
+       { filteredFilms.map((f: Films) => (
+      
+       <SearchLabel key= {f.id} f={f} /> 
+        ))}</div>
       </div>
   
   )

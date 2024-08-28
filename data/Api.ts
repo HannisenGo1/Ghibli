@@ -8,7 +8,7 @@ export interface Api {
 export type Films = {
 id: string | number;
 title: string;
-image: string | number;
+image: string;
 description: string;
 release_date: string;
 producer: string;
