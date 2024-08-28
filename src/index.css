@@ -54,3 +54,7 @@ section.filmcard{
   border: 3px solid #213547;;
 
 }
+
+.conterdiv{
+  display: flex;
+}
