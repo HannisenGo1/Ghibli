@@ -6,3 +6,32 @@
   color: red;
 }
 
+.favoFilmBtn{
+  transition: none;
+  cursor: pointer;
+  background-color: beige;
+  padding: 1em 1.2em;
+
+}
+
+.star-button {
+  display: flex;
+  border: none;
+  color: #5a5444;
+  padding: 0.6em 1.0em;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.star-icon {
+  margin-right: 10px;
+  color: rgb(80, 78, 78);
+  font-size: 4em;
+}
+
+.star-icon.on {
+  color: rgb(179, 155, 25);
+  background-color: none;
+}

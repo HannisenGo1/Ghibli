@@ -40,10 +40,11 @@ function App() {
     <div className="app">
       <header className="header"></header>
       <AntalFilms />
+      <button className="favoFilmBtn"> Favorite movies </button>
       <h1>Studio Ghibli</h1>
-      <p>
+     
         <Info />
-      </p>
+   
 
       <input
         type="text"
