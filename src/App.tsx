@@ -5,6 +5,7 @@ import './App.css';
 import Info from './info';
 import { useFilms } from '../data/store';
 import AntalFilms from '../components/Antalfilms';
+// import Vy from '../components/vyer'
 
 function App() {
   const { setAllFilms, allFilms } = useFilms(state => ({
@@ -39,6 +40,7 @@ function App() {
   return (
     <div className="app">
       <header className="header"></header>
+     
       <AntalFilms />
       <button className="favoFilmBtn"> Favorite movies </button>
       <h1>Studio Ghibli</h1>

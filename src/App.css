@@ -1,37 +1,55 @@
 .app{
   text-align: center;
 }
-.h1{
-  
-  color: red;
-}
+
 
 .favoFilmBtn{
   transition: none;
   cursor: pointer;
-  background-color: beige;
+  background-color: transparent;
   padding: 1em 1.2em;
-
+  font-weight: bold;
 }
-
-.star-button {
-  display: flex;
+.button-container {
+  display: flex; 
+  align-items: center; 
+}
+.heart-button {
   border: none;
   color: #5a5444;
   padding: 0.6em 1.0em;
-  font-size: 1em;
+  font-size: 13px; 
   cursor: pointer;
   background-color: transparent;
   transition: background-color 0.3s ease;
 }
 
-.star-icon {
-  margin-right: 10px;
-  color: rgb(80, 78, 78);
-  font-size: 4em;
+.heart-button .fa-heart {
+  color: rgb(80, 78, 78); 
+  font-size: 36px; 
 }
 
-.star-icon.on {
-  color: rgb(179, 155, 25);
-  background-color: none;
+
+.heart-button.red-mode .fa-heart {
+  color: rgb(211, 29, 29); 
+}
+.eye-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 1em; 
+}
+
+.eye-button .fa-eye {
+  color: rgb(80, 78, 78); 
+  font-size: 36px; 
+}
+/* Klass för att ändra stil när greenMode är aktivt */
+.eye-button.green-mode .fa-eye {
+  color: #28a745; /* Grön färg för ikonen */
+}
+
+/* Om du vill lägga till hover-effekter */
+.eye-button:hover .fa-eye {
+  opacity: 0.8; /* Lätt genomskinlighet på hover */
 }

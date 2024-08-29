@@ -7,18 +7,39 @@
 
 
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEye } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const FavoriteFilms = () => {
-  const [yellowMode, setYellowMode] = useState<boolean>(false);
+  const [redMode, setRedMode] = useState<boolean>(false);
+  const [ greenMode, setGreenmode] = useState<boolean>(false)
 
   const handleClick = () => {
-    setYellowMode((y) => !y);
+    setRedMode((y) => !y);
   };
 
+  const handleGreenClick = () => {
+    setGreenmode((g => !g));
+  }
+
   return (
-    <button onClick={handleClick} className="star-button">
-      <span className={`star-icon${yellowMode ? " on" : ""}`}>★</span>
-    </button>
+    <div className="button-container"> 
+
+      <button 
+      className={`heart-button${redMode ? " red-mode" : ""}`}    
+      onClick={handleClick} >
+        <FontAwesomeIcon icon={faHeart} />
+      
+      </button>
+
+      <button
+        className={`eye-button${greenMode ? " green-mode" : ""}`}
+        onClick={handleGreenClick}
+      >
+        <FontAwesomeIcon icon={faEye} />
+      </button>
+    </div>
   );
 };
 

@@ -14,7 +14,7 @@ release_date: string;
 producer: string;
 }
 
-async function getFilms(): Promise<Api> {
+async function getFilms(): Promise<Films[]> {
 const response: Response = await fetch (' https://ghibliapi.vercel.app/films/')
 if (!response.ok){
     throw new Error('network respons wasnt okej')
